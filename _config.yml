@@ -1,0 +1,17 @@
+theme: jekyll-theme-minimal
+title: Javier Alcaide Ceaa - Portfolio
+description: Desarrollador | Proyectos y experiencia profesional
+```
+
+## 📂 Estructura recomendada
+```
+JavierAlcaideCeaa.github.io/
+├── _config.yml
+├── index.md
+├── proyectos.md
+├── sobre-mi.md
+├── contacto.md
+└── assets/
+    ├── css/
+    ├── images/
+    └── docs/
