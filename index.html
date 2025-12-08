@@ -230,6 +230,69 @@
             font-weight: bold;
         }
 
+        /* Achievements Section */
+        #logros {
+            background: white;
+        }
+
+        .achievement-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--light);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .achievement-content {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+            padding: 2.5rem;
+            align-items: center;
+        }
+
+        .achievement-logo {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .company-logo {
+            width: 100%;
+            height: auto;
+            max-width: 180px;
+            object-fit: contain;
+        }
+
+        .achievement-info h3 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-organizer {
+            color: var(--secondary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-description {
+            color: var(--secondary);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
         /* Projects Section */
         .projects-grid {
             display: grid;
@@ -429,6 +492,16 @@
             .cta-button {
                 margin: 0.5rem;
             }
+
+            .achievement-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .achievement-logo {
+                margin: 0 auto;
+                max-width: 200px;
+            }
         }
     </style>
 </head>
@@ -442,6 +515,7 @@
                 <li><a href="#sobre-mi">Sobre mí</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
 
+                <li><a href="#logros">Logros</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -518,6 +592,27 @@
     </section>
 
 
+
+    <!-- Achievements Section -->
+    <section id="logros">
+        <div class="container">
+            <h2 class="section-title">Logros y Reconocimientos</h2>
+            <div class="achievement-card">
+                <div class="achievement-content">
+                    <div class="achievement-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/NTT_Data_logo.svg/2560px-NTT_Data_logo.svg.png" alt="NTT DATA" class="company-logo">
+                    </div>
+                    <div class="achievement-info">
+                        <h3>🏆 4º Puesto - Digital Builders</h3>
+                        <p class="achievement-organizer">Organizado por NTT DATA</p>
+                        <p class="achievement-description">
+                            Reconocimiento por desempeño destacado en la competición Digital Builders, demostrando habilidades técnicas, trabajo en equipo y capacidad de resolución de problemas en un entorno competitivo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Projects Section -->
     <section id="proyectos">
