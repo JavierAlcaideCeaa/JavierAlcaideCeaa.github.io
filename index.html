@@ -4,552 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javier Alcaide Cea - Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root{
-            --primary: #8b7355;
-            --primary-dark: #6b5644;
-            --secondary: #64748b;
-            --dark: #2d2419;
-            --light: #f5f1ec;
-            --accent: #a89078;
-            --beige: #dacbba;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background: var(--light);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header & Navigation */
-        header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 0;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--secondary);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            color: white;
-            padding: 6rem 0;
-            text-align: center;
-        }
-
-        .hero-profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            object-fit: cover;
-            margin: 0 auto 2rem;
-            animation: fadeInUp 0.8s ease;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 0.8s ease 0.1s both;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 0.8s ease 0.2s both;
-        }
-
-        .hero-subtitle {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.85;
-            animation: fadeInUp 0.8s ease 0.3s both;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: white;
-            color: var(--primary);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
-            animation: fadeInUp 0.8s ease 0.4s both;
-            margin: 0 0.5rem;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        .cta-button.secondary {
-            background: transparent;
-            border: 2px solid white;
-            color: white;
-        }
-
-        /* Sections */
-        section {
-            padding: 5rem 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--dark);
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: var(--primary);
-            margin: 1rem auto;
-            border-radius: 2px;
-        }
-
-        /* About Section */
-        .about-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .about-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .about-profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            object-fit: cover;
-            margin: 0 auto 2rem;
-            display: block;
-        }
-
-        .about-text {
-            font-size: 1.15rem;
-            color: var(--secondary);
-            line-height: 1.8;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .education-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-        }
-
-        .education-card h3 {
-            color: var(--primary);
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .education-card .institution {
-            color: var(--dark);
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .education-card .details {
-            color: var(--secondary);
-            font-size: 1rem;
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .skill-card h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .skill-list {
-            list-style: none;
-        }
-
-        .skill-list li {
-            padding: 0.5rem 0;
-            color: var(--secondary);
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        .skill-list li::before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: bold;
-        }
-
-        /* Achievements Section */
-        #logros {
-            background: white;
-        }
-
-        .achievement-card {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--light);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .achievement-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .achievement-content {
-            display: grid;
-            grid-template-columns: 250px 1fr;
-            gap: 2rem;
-            padding: 2.5rem;
-            align-items: center;
-        }
-
-        .achievement-logo {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-
-        .company-logo {
-            width: 100%;
-            height: auto;
-            max-width: 180px;
-            object-fit: contain;
-        }
-
-        .achievement-info h3 {
-            color: var(--primary);
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .achievement-organizer {
-            color: var(--secondary);
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .achievement-description {
-            color: var(--secondary);
-            line-height: 1.8;
-            font-size: 1.05rem;
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-        }
-
-        .project-img {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .project-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-content h3 {
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .project-content p {
-            color: var(--secondary);
-            margin-bottom: 1rem;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .tag {
-            background: var(--primary);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .project-link {
-            text-decoration: none;
-            color: var(--primary);
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        .project-link:hover {
-            color: var(--accent);
-        }
-
-        /* Languages & Competencies */
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .info-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .info-card h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .language-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid var(--light);
-        }
-
-        .language-item:last-child {
-            border-bottom: none;
-        }
-
-        .language-name {
-            font-weight: 600;
-            color: var(--dark);
-        }
-
-        .language-level {
-            color: var(--secondary);
-            font-size: 0.9rem;
-        }
-
-        /* Contact Section */
-        #contacto {
-            background: white;
-        }
-
-        .contact-content {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-link {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            background: var(--light);
-            color: var(--dark);
-            text-decoration: none;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .contact-link:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-                font-size: 0.9rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .cta-button {
-                margin: 0.5rem;
-            }
-
-            .hero-profile-img {
-                width: 120px;
-                height: 120px;
-            }
-
-            .about-profile-img {
-                width: 150px;
-                height: 150px;
-            }
-
-            .achievement-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .achievement-logo {
-                margin: 0 auto;
-                max-width: 200px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
@@ -575,7 +30,7 @@
             <p>Estudiante de Ingeniería Informática | Desarrollador Full Stack</p>
             <p class="hero-subtitle">Escuela Superior de Informática - UCLM | Toledo, España</p>
             <a href="#contacto" class="cta-button">Contáctame</a>
-            <a href="https://github.com/JavierAlcaideCeaa" class="cta-button secondary" target="_blank">Ver GitHub</a>
+            <a href="https://github.com/JavierAlcaideCeaa" class="cta-button secondary" target="_blank" rel="noopener">Ver GitHub</a>
         </div>
     </section>
 
@@ -588,7 +43,7 @@
                     <img src="assets/portfolio2.jpeg" alt="Javier Alcaide Cea" class="about-profile-img">
                 </div>
                 <div class="about-text">
-                    <p>Estudiante de último año de Ingeniería Informática en la ESI-UCLM con sólida formación en desarrollo full-stack. Apasionado por la tecnología, con gran capacidad de aprendizaje y trabajo en equipo. Orientado a la resolución de problemas mediante soluciones eficientes y escalables.</p>
+                    <p>Estudiante de último año de Ingeniería Informática en la ESI-UCLM con sólida formación en desarrollo full-stack. Apasionado por la tecnología, con gran capacidad de apren[...]
                 </div>
                 
                 <div class="education-card">
@@ -692,7 +147,7 @@
                         <h3>4º Puesto - Digital Builders</h3>
                         <p class="achievement-organizer">Organizado por NTT DATA</p>
                         <p class="achievement-description">
-                            Reconocimiento por desempeño destacado en la competición Digital Builders, demostrando habilidades técnicas, trabajo en equipo y capacidad de resolución de problemas en un entorno competitivo.
+                            Reconocimiento por desempeño destacado en la competición Digital Builders, demostrando habilidades técnicas, trabajo en equipo y capacidad de resolución de problemas en[...]
                         </p>
                     </div>
                 </div>
@@ -711,7 +166,7 @@
                     </div>
                     <div class="project-content">
                         <h3>Sistema Distribuido - SSDD</h3>
-                        <p>Sistema distribuido desarrollado en la asignatura de Sistemas Distribuidos. Implementa comunicación entre componentes, manejo eficiente de recursos y coordinación entre procesos mediante sockets y técnicas de concurrencia.</p>
+                        <p>Sistema distribuido desarrollado en la asignatura de Sistemas Distribuidos. Implementa comunicación entre componentes, manejo eficiente de recursos y coordinación entre pr[...]
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">C++</span>
@@ -719,7 +174,7 @@
                             <span class="tag">Concurrencia</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/JavierAlcaideCeaa/SSDDTrabajo" class="project-link" target="_blank">Ver en GitHub</a>
+                            <a href="https://github.com/JavierAlcaideCeaa/SSDDTrabajo" class="project-link" target="_blank" rel="noopener">Ver en GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -728,7 +183,7 @@
                     <div class="project-img">Proyecto 2</div>
                     <div class="project-content">
                         <h3>Aplicación Web - DSW</h3>
-                        <p>Aplicación web moderna desarrollada en la asignatura de Desarrollo de Software Web. Implementa funcionalidades frontend y backend con Node.js, gestión de rutas, interfaces de usuario y lógica de negocio tanto del lado cliente como servidor.</p>
+                        <p>Aplicación web moderna desarrollada en la asignatura de Desarrollo de Software Web. Implementa funcionalidades frontend y backend con Node.js, gestión de rutas, interfaces[...]
                         <div class="project-tags">
                             <span class="tag">TypeScript</span>
                             <span class="tag">JavaScript</span>
@@ -736,7 +191,7 @@
                             <span class="tag">HTML/CSS</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/DavidAlegreL/aplicacionDSW" class="project-link" target="_blank">Ver en GitHub</a>
+                            <a href="https://github.com/DavidAlegreL/aplicacionDSW" class="project-link" target="_blank" rel="noopener">Ver en GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -747,7 +202,7 @@
                     </div>
                     <div class="project-content">
                         <h3>GSI Lab - Deep Learning</h3>
-                        <p>Prácticas de laboratorio enfocadas en Deep Learning para Gestión de Sistemas de Información. Implementación de redes neuronales, análisis y procesado de datos con enfoque en aprendizaje profundo y desarrollo reproducible mediante notebooks.</p>
+                        <p>Prácticas de laboratorio enfocadas en Deep Learning para Gestión de Sistemas de Información. Implementación de redes neuronales, análisis y procesado de datos con enfoq[...]
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">Deep Learning</span>
@@ -755,7 +210,7 @@
                             <span class="tag">Neural Networks</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/JavierAlcaideCeaa/GsiLab" class="project-link" target="_blank">Ver en GitHub</a>
+                            <a href="https://github.com/JavierAlcaideCeaa/GsiLab" class="project-link" target="_blank" rel="noopener">Ver en GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -764,21 +219,21 @@
                     <div class="project-img">Proyecto 4</div>
                     <div class="project-content">
                         <h3>Reproductor AudioVisual</h3>
-                        <p>Aplicación de escritorio desarrollada en Python para reproducir archivos de audio y vídeo. Incluye interfaz de usuario intuitiva con funcionalidades de pausa, avance, retroceso y control de volumen mediante librerías multimedia.</p>
+                        <p>Aplicación de escritorio desarrollada en Python para reproducir archivos de audio y vídeo. Incluye interfaz de usuario intuitiva con funcionalidades de pausa, avance, retr[...]
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">GUI</span>
                             <span class="tag">Multimedia</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/JavierAlcaideCeaa/ReproductorAudioVisual" class="project-link" target="_blank">Ver en GitHub</a>
+                            <a href="https://github.com/JavierAlcaideCeaa/ReproductorAudioVisual" class="project-link" target="_blank" rel="noopener">Ver en GitHub</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div style="text-align: center; margin-top: 3rem;">
                 <p style="color: var(--secondary); font-size: 1.1rem;">
-                    Más proyectos disponibles en mi perfil de <a href="https://github.com/JavierAlcaideCeaa" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: bold;">GitHub</a>
+                    Más proyectos disponibles en mi perfil de <a href="https://github.com/JavierAlcaideCeaa" target="_blank" rel="noopener" style="color: var(--primary); text-decoration: none; font-weight: bold;">G[...]
                 </p>
             </div>
         </div>
@@ -832,7 +287,7 @@
                     <a href="mailto:alcaidejavier6@gmail.com" class="contact-link">
                         📧 Email
                     </a>
-                    <a href="https://github.com/JavierAlcaideCeaa" class="contact-link" target="_blank">
+                    <a href="https://github.com/JavierAlcaideCeaa" class="contact-link" target="_blank" rel="noopener">
                         💻 GitHub
                     </a>
                 </div>
@@ -847,5 +302,7 @@
             <p style="margin-top: 0.5rem; opacity: 0.7;">Estudiante de Ingeniería Informática | ESI-UCLM</p>
         </div>
     </footer>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
