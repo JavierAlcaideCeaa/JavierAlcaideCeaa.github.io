@@ -3,21 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javier Alcaide Cea - Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Javier Alcaide Cea - Desarrollador Full Stack | Portfolio</title>
+    <meta name="description" content="Portfolio de Javier Alcaide Cea, estudiante de Ingeniería Informática en UCLM. Desarrollador Full Stack especializado en Python, JavaScript, Deep Learning y sistemas distribuidos.">
+    <meta name="keywords" content="Javier Alcaide Cea, desarrollador full stack, ingeniería informática, UCLM, Python, JavaScript, Deep Learning, portfolio, desarrollador web, Toledo">
+    <meta name="author" content="Javier Alcaide Cea">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://javieralcaideceaa.github.io/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://javieralcaideceaa.github.io/">
+    <meta property="og:title" content="Javier Alcaide Cea - Desarrollador Full Stack | Portfolio">
+    <meta property="og:description" content="Portfolio profesional de Javier Alcaide Cea. Desarrollador Full Stack con experiencia en Python, JavaScript, Deep Learning y desarrollo web.">
+    <meta property="og:image" content="https://javieralcaideceaa.github.io/assets/portfolio.jpeg">
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://javieralcaideceaa.github.io/">
+    <meta name="twitter:title" content="Javier Alcaide Cea - Desarrollador Full Stack | Portfolio">
+    <meta name="twitter:description" content="Portfolio profesional de Javier Alcaide Cea. Desarrollador Full Stack con experiencia en Python, JavaScript, Deep Learning y desarrollo web.">
+    <meta name="twitter:image" content="https://javieralcaideceaa.github.io/assets/portfolio.jpeg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Javier Alcaide Cea",
+      "url": "https://javieralcaideceaa.github.io/",
+      "image": "https://javieralcaideceaa.github.io/assets/portfolio.jpeg",
+      "jobTitle": "Desarrollador Full Stack",
+      "description": "Estudiante de Ingeniería Informática especializado en desarrollo Full Stack",
+      "worksFor": {
+        "@type": "EducationalOrganization",
+        "name": "Escuela Superior de Informática - UCLM"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Universidad de Castilla-La Mancha",
+        "sameAs": "https://www.uclm.es/"
+      },
+      "email": "alcaidejavier6@gmail.com",
+      "sameAs": [
+        "https://github.com/JavierAlcaideCeaa",
+        "https://www.linkedin.com/in/javier-alcaide-cea-435614300/"
+      ],
+      "knowsAbout": [
+        "Python",
+        "JavaScript",
+        "Java",
+        "Deep Learning",
+        "Desarrollo Web",
+        "Sistemas Distribuidos",
+        "Spring Boot",
+        "Angular",
+        "Node.js"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toledo",
+        "addressRegion": "Castilla-La Mancha",
+        "addressCountry": "ES"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
     <header>
         <nav class="container">
-            <div class="logo">JAC</div>
+            <div class="logo" aria-label="Logo Javier Alcaide Cea">JAC</div>
             <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#logros">Logros</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#inicio" aria-label="Ir a Inicio">Inicio</a></li>
+                <li><a href="#sobre-mi" aria-label="Ir a Sobre mí">Sobre mí</a></li>
+                <li><a href="#habilidades" aria-label="Ir a Habilidades">Habilidades</a></li>
+                <li><a href="#logros" aria-label="Ir a Logros">Logros</a></li>
+                <li><a href="#proyectos" aria-label="Ir a Proyectos">Proyectos</a></li>
+                <li><a href="#idiomas-competencias" aria-label="Ir a Competencias">Competencias</a></li>
+                <li><a href="#contacto" aria-label="Ir a Contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -25,12 +97,12 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="container">
-            <img src="assets/portfolio.jpeg" alt="Javier Alcaide Cea" class="hero-profile-img">
+            <img src="assets/portfolio.jpeg" alt="Javier Alcaide Cea - Desarrollador Full Stack" class="hero-profile-img" width="150" height="150">
             <h1>Javier Alcaide Cea</h1>
             <p>Estudiante de Ingeniería Informática | Desarrollador Full Stack</p>
             <p class="hero-subtitle">Escuela Superior de Informática - UCLM | Toledo, España</p>
-            <a href="#contacto" class="cta-button">Contáctame</a>
-            <a href="https://github.com/JavierAlcaideCeaa" class="cta-button secondary" target="_blank" rel="noopener">Ver GitHub</a>
+            <a href="#contacto" class="cta-button" aria-label="Contactar con Javier Alcaide">Contáctame</a>
+            <a href="https://www.linkedin.com/in/javier-alcaide-cea-435614300/" class="cta-button secondary" target="_blank" rel="noopener noreferrer" aria-label="Ver perfil de LinkedIn de Javier Alcaide">Ver LinkedIn</a>
         </div>
     </section>
 
@@ -40,7 +112,7 @@
             <h2 class="section-title">Sobre mí</h2>
             <div class="about-content">
                 <div class="about-header">
-                    <img src="assets/portfolio2.jpeg" alt="Javier Alcaide Cea" class="about-profile-img">
+                    <img src="assets/portfolio2.jpeg" alt="Javier Alcaide Cea - Estudiante de Ingeniería Informática" class="about-profile-img" width="200" height="200">
                 </div>
                 <div class="about-text">
                     <p>Hola, soy Javier. Estoy terminando Ingeniería Informática y desde hace años la tecnología es mi forma de crear, aprender y resolver problemas. He desarrollado de todo: desde reproductores multimedia hasta chatbots y APIs completas, y disfruto cada paso del proceso, desde entender cómo funcionan las cosas por dentro hasta convertir una idea en algo visual y usable.</p>
@@ -64,15 +136,15 @@
         <div class="container">
             <h2 class="section-title">Habilidades Técnicas</h2>
             <div class="skills-grid">
-                <div class="skill-card">
+                <article class="skill-card">
                     <h3>Lenguajes de Programación</h3>
                     <ul class="skill-list">
                         <li>Python</li>
                         <li>Java</li>
                         <li>JavaScript / TypeScript</li>
                     </ul>
-                </div>
-                <div class="skill-card">
+                </article>
+                <article class="skill-card">
                     <h3>Frontend</h3>
                     <ul class="skill-list">
                         <li>HTML5</li>
@@ -80,8 +152,8 @@
                         <li>Angular</li>
                         <li>Diseño Responsive</li>
                     </ul>
-                </div>
-                <div class="skill-card">
+                </article>
+                <article class="skill-card">
                     <h3>Backend</h3>
                     <ul class="skill-list">
                         <li>Spring Boot</li>
@@ -89,16 +161,16 @@
                         <li>API REST</li>
                         <li>Arquitectura Cliente-Servidor</li>
                     </ul>
-                </div>
-                <div class="skill-card">
+                </article>
+                <article class="skill-card">
                     <h3>Bases de Datos</h3>
                     <ul class="skill-list">
                         <li>SQL (PostgreSQL/MySQL)</li>
                         <li>Gestión de datos</li>
                         <li>Persistencia de datos</li>
                     </ul>
-                </div>
-                <div class="skill-card">
+                </article>
+                <article class="skill-card">
                     <h3>Machine Learning & IA</h3>
                     <ul class="skill-list">
                         <li>Deep Learning</li>
@@ -106,8 +178,8 @@
                         <li>TensorFlow / PyTorch</li>
                         <li>Jupyter Notebook</li>
                     </ul>
-                </div>
-                <div class="skill-card">
+                </article>
+                <article class="skill-card">
                     <h3>Sistemas Distribuidos</h3>
                     <ul class="skill-list">
                         <li>Programación de Sockets</li>
@@ -115,8 +187,8 @@
                         <li>Sincronización de procesos</li>
                         <li>Coordinación distribuida</li>
                     </ul>
-                </div>
-                <div class="skill-card">
+                </article>
+                <article class="skill-card">
                     <h3>Desarrollo de Aplicaciones</h3>
                     <ul class="skill-list">
                         <li>Interfaces Gráficas (GUI)</li>
@@ -124,8 +196,8 @@
                         <li>Diseño Modular</li>
                         <li>Patrones de diseño</li>
                     </ul>
-                </div>
-                <div class="skill-card">
+                </article>
+                <article class="skill-card">
                     <h3>Herramientas & DevOps</h3>
                     <ul class="skill-list">
                         <li>Git - Control de versiones</li>
@@ -133,7 +205,7 @@
                         <li>Debugging & Testing</li>
                         <li>Documentación técnica</li>
                     </ul>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -142,20 +214,20 @@
     <section id="logros">
         <div class="container">
             <h2 class="section-title">Logros y Reconocimientos</h2>
-            <div class="achievement-card">
+            <article class="achievement-card">
                 <div class="achievement-content">
                     <div class="achievement-logo">
-                        <img src="assets/ntt.png" alt="NTT DATA" class="company-logo">
+                        <img src="assets/ntt.png" alt="Logo NTT DATA" class="company-logo" width="180" height="auto">
                     </div>
                     <div class="achievement-info">
                         <h3>4º Puesto - Digital Builders</h3>
                         <p class="achievement-organizer">Organizado por NTT DATA</p>
                         <p class="achievement-description">
-                            Reconocimiento por desempeño destacado en la competición Digital Builders, demostrando habilidades técnicas, trabajo en equipo y capacidad de resolución de problemas en un entorno competitivo.
+                            Reconocimiento obtenido en la competición Digital Builders, demostrando habilidades en desarrollo de soluciones tecnológicas innovadoras.
                         </p>
                     </div>
                 </div>
-            </div>
+            </article>
         </div>
     </section>
 
@@ -164,84 +236,49 @@
         <div class="container">
             <h2 class="section-title">Proyectos</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <article class="project-card">
                     <div class="project-img">
-                         <img src="assets/sistema-distribuido.png" alt="SSDD">    
+                         <img src="assets/sistema-distribuido.png" alt="Sistema Distribuido SSDD - Proyecto de comunicación entre componentes" width="100%" height="200">    
                     </div>
                     <div class="project-content">
                         <h3>Sistema Distribuido - SSDD</h3>
                         <p>Sistema distribuido desarrollado en la asignatura de Sistemas Distribuidos. Implementa comunicación entre componentes, manejo eficiente de recursos y coordinación entre procesos mediante sockets y técnicas de concurrencia.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">C++</span>
-                            <span class="tag">Sockets</span>
-                            <span class="tag">Concurrencia</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/JavierAlcaideCeaa/SSDDTrabajo" class="project-link" target="_blank" rel="noopener">Ver en GitHub</a>
-                        </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="project-card">
+                <article class="project-card">
                     <div class="project-img">
-                        <img src="assets/web.png" alt="appWeb"> 
+                        <img src="assets/web.png" alt="Aplicación Web DSW - Desarrollo Full Stack con Node.js" width="100%" height="200"> 
                     </div>
                     <div class="project-content">
                         <h3>Aplicación Web - DSW</h3>
                         <p>Aplicación web moderna desarrollada en la asignatura de Desarrollo de Software Web. Implementa funcionalidades frontend y backend con Node.js, gestión de rutas, interfaces de usuario y lógica de negocio tanto del lado cliente como servidor.</p>
-                        <div class="project-tags">
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">HTML/CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/DavidAlegreL/aplicacionDSW" class="project-link" target="_blank" rel="noopener">Ver en GitHub</a>
-                        </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="project-card">
+                <article class="project-card">
                     <div class="project-img">
-                         <img src="assets/44.jpg" alt="DEEP LEARNING">    
+                         <img src="assets/44.jpg" alt="GSI Lab Deep Learning - Redes Neuronales y Análisis de Datos" width="100%" height="200">    
                     </div>
                     <div class="project-content">
                         <h3>GSI Lab - Deep Learning</h3>
                         <p>Prácticas de laboratorio enfocadas en Deep Learning para Gestión de Sistemas de Información. Implementación de redes neuronales, análisis y procesado de datos con enfoque en aprendizaje profundo y desarrollo reproducible mediante notebooks.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Deep Learning</span>
-                            <span class="tag">Jupyter Notebook</span>
-                            <span class="tag">Neural Networks</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/JavierAlcaideCeaa/GsiLab" class="project-link" target="_blank" rel="noopener">Ver en GitHub</a>
-                        </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="project-card">
+                <article class="project-card">
                     <div class="project-img">
-                        <img src="assets/reproductor.png" alt="reproductorMultimedia"> 
+                        <img src="assets/reproductor.png" alt="Reproductor Audiovisual Python - Interfaz multimedia" width="100%" height="200"> 
                     </div>
                     <div class="project-content">
                         <h3>Reproductor AudioVisual</h3>
                         <p>Aplicación de escritorio desarrollada en Python para reproducir archivos de audio y vídeo. Incluye interfaz de usuario intuitiva con funcionalidades de pausa, avance, retroceso y control de volumen mediante librerías multimedia.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">GUI</span>
-                            <span class="tag">Multimedia</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/JavierAlcaideCeaa/ReproductorAudioVisual" class="project-link" target="_blank" rel="noopener">Ver en GitHub</a>
-                        </div>
                     </div>
-                </div>
+                </article>
             </div>
             <div style="text-align: center; margin-top: 3rem;">
                 <p style="color: var(--secondary); font-size: 1.1rem;">
-                    Más proyectos disponibles en mi perfil de <a href="https://github.com/JavierAlcaideCeaa" target="_blank" rel="noopener" style="color: var(--primary); text-decoration: none; font-weight: bold;">GitHub</a>
+                    Más proyectos disponibles en mi perfil de <a href="https://github.com/JavierAlcaideCeaa" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; font-weight: bold;" aria-label="Ver más proyectos en GitHub">GitHub</a>
                 </p>
             </div>
         </div>
@@ -252,7 +289,7 @@
         <div class="container">
             <h2 class="section-title">Idiomas y Competencias</h2>
             <div class="info-grid">
-                <div class="info-card">
+                <article class="info-card">
                     <h3>Idiomas</h3>
                     <div class="language-item">
                         <span class="language-name">Español</span>
@@ -260,25 +297,37 @@
                     </div>
                     <div class="language-item">
                         <span class="language-name">Inglés</span>
-                        <span class="language-level">Nivel Alto</span>
+                        <span class="language-level">Intermedio</span>
                     </div>
-                    <p style="color: var(--secondary); margin-top: 1rem; font-size: 0.95rem;">
-                        Comprensión oral y escrita avanzada
-                    </p>
-                </div>
+                </article>
                 
-                <div class="info-card">
+                <article class="info-card competencies-card">
                     <h3>Competencias Personales</h3>
-                    <ul class="skill-list">
-                        <li>Excelente capacidad de trabajo en equipo y habilidades interpersonales</li>
-                        <li>Disciplina y constancia en el logro de objetivos, reforzada por la práctica deportiva</li>
-                        <li>Mentalidad analítica y observadora para la resolución eficiente de problemas</li>
-                        <li>Alta capacidad de aprendizaje continuo y curiosidad por nuevas tecnologías</li>
-                        <li>Organización y gestión efectiva del tiempo y prioridades</li>
-                        <li>Actitud positiva y proactiva en entornos colaborativos</li>
-                        <li>Compromiso y dedicación en cada proyecto emprendido</li>
-                    </ul>
-                </div>
+                    <div class="competencies-carousel">
+                        <button class="carousel-btn prev" aria-label="Competencia anterior">‹</button>
+                        <div class="competency-item active">
+                            <div class="competency-icon">💡</div>
+                            <p><strong>Resolución de Problemas:</strong> Capacidad analítica para identificar y solucionar desafíos técnicos de forma eficiente.</p>
+                        </div>
+                        <div class="competency-item">
+                            <div class="competency-icon">🚀</div>
+                            <p><strong>Aprendizaje Rápido:</strong> Adaptación ágil a nuevas tecnologías y frameworks, con enfoque en la mejora continua.</p>
+                        </div>
+                        <div class="competency-item">
+                            <div class="competency-icon">🎯</div>
+                            <p><strong>Proactividad:</strong> Iniciativa para anticipar necesidades y proponer soluciones innovadoras.</p>
+                        </div>
+                        <div class="competency-item">
+                            <div class="competency-icon">🤝</div>
+                            <p><strong>Trabajo en Equipo:</strong> Colaboración efectiva en entornos multidisciplinarios y comunicación clara.</p>
+                        </div>
+                        <div class="competency-item">
+                            <div class="competency-icon">⚡</div>
+                            <p><strong>Disciplina:</strong> Constancia y compromiso aplicados tanto en desarrollo como en el deporte.</p>
+                        </div>
+                        <button class="carousel-btn next" aria-label="Siguiente competencia">›</button>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -292,11 +341,24 @@
                     ¿Tienes un proyecto en mente o simplemente quieres conectar? No dudes en contactarme.
                 </p>
                 <div class="contact-links">
-                    <a href="mailto:alcaidejavier6@gmail.com" class="contact-link">
-                        📧 Email
+                    <a href="mailto:alcaidejavier6@gmail.com" class="contact-link" aria-label="Enviar correo a Javier Alcaide">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        alcaidejavier6@gmail.com
                     </a>
-                    <a href="https://github.com/JavierAlcaideCeaa" class="contact-link" target="_blank" rel="noopener">
-                        💻 GitHub
+                    <a href="https://www.linkedin.com/in/javier-alcaide-cea-435614300/" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/JavierAlcaideCeaa" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
                     </a>
                 </div>
             </div>

@@ -20,4 +20,46 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     });
+
+    // Carousel de competencias
+    const initCompetenciesCarousel = () => {
+        const carousel = document.querySelector('.competencies-carousel');
+        if (!carousel) return;
+
+        const items = carousel.querySelectorAll('.competency-item');
+        const prevBtn = carousel.querySelector('.carousel-btn.prev');
+        const nextBtn = carousel.querySelector('.carousel-btn.next');
+        
+        let currentIndex = 0;
+        const totalItems = items.length;
+
+        const updateCarousel = () => {
+            items.forEach((item, index) => {
+                item.classList.remove('active', 'prev');
+                if (index === currentIndex) {
+                    item.classList.add('active');
+                } else if (index < currentIndex) {
+                    item.classList.add('prev');
+                }
+            });
+        };
+
+        const nextSlide = () => {
+            currentIndex = (currentIndex + 1) % totalItems;
+            updateCarousel();
+        };
+
+        const prevSlide = () => {
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+            updateCarousel();
+        };
+
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        // Auto-play opcional (cada 5 segundos)
+        setInterval(nextSlide, 5000);
+    };
+
+    initCompetenciesCarousel();
 });

@@ -1,4 +1,9 @@
 theme: jekyll-theme-minimal
-title: Javier Alcaide Ceaa - Portfolio
-description: Desarrollador | Proyectos y experiencia profesional
-
+title: Javier Alcaide Cea - Desarrollador Full Stack | Portfolio
+description: Portfolio profesional de Javier Alcaide Cea. Estudiante de Ingeniería Informática en UCLM especializado en desarrollo Full Stack, Python, JavaScript, Deep Learning y sistemas distribuidos.
+lang: es
+url: https://javieralcaideceaa.github.io
+author: Javier Alcaide Cea
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
