@@ -1,8 +1,8 @@
 # Javier Alcaide Cea - Portfolio
 
-🚀 Portfolio profesional de Javier Alcaide Cea, estudiante de Ingeniería Informática en la UCLM.
+ Portfolio profesional de Javier Alcaide Cea, estudiante de Ingeniería Informática en la UCLM.
 
-## 🎯 Sobre mí
+## Sobre mí
 
 Desarrollador Full Stack apasionado por la tecnología, he trabajado en:
 - Python, JavaScript, Java
@@ -10,7 +10,7 @@ Desarrollador Full Stack apasionado por la tecnología, he trabajado en:
 - Desarrollo Web (Frontend y Backend)
 - Sistemas Distribuidos
 
-## 🛠️ Tecnologías
+## Tecnologías
 
 - **Frontend:** HTML5, CSS3, JavaScript, Angular
 - **Backend:** Spring Boot, Node.js, API REST
@@ -18,12 +18,12 @@ Desarrollador Full Stack apasionado por la tecnología, he trabajado en:
 - **IA/ML:** TensorFlow, PyTorch, Jupyter Notebook
 - **Herramientas:** Git, GitHub
 
-## 📫 Contacto
+## Contacto
 
-- 📧 Email: alcaidejavier6@gmail.com
-- 💻 GitHub: [@JavierAlcaideCeaa](https://github.com/JavierAlcaideCeaa)
+-  Email: alcaidejavier6@gmail.com
+-  GitHub: [@JavierAlcaideCeaa](https://github.com/JavierAlcaideCeaa)
 
-## 🌐 Ver Portfolio
+## Ver Portfolio
 
 Visita mi portfolio en: [https://javieralcaideceaa.github.io/](https://javieralcaideceaa.github.io/)
 
